@@ -638,6 +638,86 @@ export default function LovenWebsite() {
 
         </motion.div>
       </AnimatePresence>
+
+      {/* Global Luxury Footer */}
+      <footer className="bg-[#0a0502] text-[#f5eadc] border-t border-white/10 pt-16 pb-8 px-6 lg:px-10">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+            
+            {/* Column 1: Brand */}
+            <div className="flex flex-col items-start">
+              <h2 className="font-serif text-3xl tracking-[0.1em] text-[#e3c59d]">LOVÉN</h2>
+              <p className="mt-4 text-xs leading-6 text-white/60 max-w-xs">
+                More than flowers. We curate breathtaking, luxury floral experiences designed to capture your most unforgettable moments.
+              </p>
+              <div className="mt-6 flex gap-4">
+                <a href="#" className="text-white/60 hover:text-[#e3c59d] transition">
+                  {/* Instagram Icon */}
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+                <a href="#" className="text-white/60 hover:text-[#e3c59d] transition">
+                  {/* Twitter/X Icon */}
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg>
+                </a>
+                <a href="#" className="text-white/60 hover:text-[#e3c59d] transition">
+                  {/* Facebook Icon */}
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                </a>
+              </div>
+            </div>
+
+            {/* Column 2: Collections */}
+            <div>
+              <h3 className="text-[10px] font-bold tracking-[0.3em] uppercase text-white/40 mb-6">Collections</h3>
+              <ul className="space-y-4 text-[11px] font-semibold tracking-[0.15em] text-white/80 uppercase">
+                <li><button onClick={() => setPage('signature')} className="hover:text-[#e3c59d] transition">Signature Bouquets</button></li>
+                <li><button onClick={() => setPage('gift')} className="hover:text-[#e3c59d] transition">Gift Sets</button></li>
+                <li><button onClick={() => setPage('custom')} className="hover:text-[#e3c59d] transition">Custom Orders</button></li>
+                <li><button onClick={() => setPage('home')} className="hover:text-[#e3c59d] transition">Home Decor</button></li>
+              </ul>
+            </div>
+
+            {/* Column 3: Client Care */}
+            <div>
+              <h3 className="text-[10px] font-bold tracking-[0.3em] uppercase text-white/40 mb-6">Client Care</h3>
+              <ul className="space-y-4 text-[11px] font-semibold tracking-[0.15em] text-white/80 uppercase">
+                <li><a href="#" className="hover:text-[#e3c59d] transition">Contact Us</a></li>
+                <li><a href="#" className="hover:text-[#e3c59d] transition">Delivery Information</a></li>
+                <li><a href="#" className="hover:text-[#e3c59d] transition">Return Policy</a></li>
+                <li><a href="#" className="hover:text-[#e3c59d] transition">Flower Care Guide</a></li>
+              </ul>
+            </div>
+
+            {/* Column 4: Newsletter */}
+            <div>
+              <h3 className="text-[10px] font-bold tracking-[0.3em] uppercase text-white/40 mb-6">Stay Connected</h3>
+              <p className="text-xs leading-5 text-white/60 mb-4">
+                Subscribe to our newsletter for exclusive previews, floral care tips, and private event invitations.
+              </p>
+              <div className="flex border border-white/20">
+                <input 
+                  type="email" 
+                  placeholder="Enter your email" 
+                  className="bg-transparent text-white px-4 py-3 flex-1 text-xs outline-none placeholder:text-white/40" 
+                />
+                <button className="bg-[#e3c59d] text-black px-4 py-3 text-[10px] font-bold tracking-[0.2em] hover:bg-[#d4b58e] transition">
+                  JOIN
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Bottom Bar */}
+          <div className="mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] tracking-[0.1em] text-white/40 uppercase">
+            <p>© 2026 LOVÉN. All rights reserved.</p>
+            <div className="flex gap-6">
+              <a href="#" className="hover:text-white/80 transition">Privacy Policy</a>
+              <a href="#" className="hover:text-white/80 transition">Terms of Service</a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
