@@ -1,0 +1,63 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build Project
+        run: npm run build
+
+      - name: Deploy to VPS
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          source: ".next/standalone/,.next/static/,public/"
+          target: "/var/www/floral"
+          strip_components: 0
+
+      - name: Start/Restart PM2
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          script: |
+            cd /var/www/floral
+            
+            # Move static files into the standalone directory for the server to serve them
+            mkdir -p .next/standalone/.next
+            cp -r .next/static .next/standalone/.next/
+            cp -r public .next/standalone/
+            
+            cd .next/standalone
+            
+            # Start or restart the PM2 process
+            pm2 describe floral > /dev/null
+            if [ $? -eq 0 ]; then
+              pm2 restart floral
+            else
+              PORT=3000 pm2 start server.js --name floral
+              pm2 save
+              pm2 startup | tail -n 1 > /tmp/pm2_startup.sh
+              chmod +x /tmp/pm2_startup.sh
+              /tmp/pm2_startup.sh
+            fi
