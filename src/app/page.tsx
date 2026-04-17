@@ -537,103 +537,180 @@ export default function LovenWebsite() {
           )}
 
           {page === 'gift' && (
-            <section className="relative min-h-[90vh] bg-black px-6 py-16 text-center text-white flex flex-col items-center justify-center">
-              <div className="absolute inset-0">
-                <Image
-                  src="/images/gift_sets_background.webp"
-                  alt="Gift Sets Background"
-                  fill
-                  priority
-                  className="object-cover object-center"
-                />
-              </div>
-              <div className="absolute inset-0 bg-black/60" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/40" />
-              
-              <div className="relative z-10 max-w-2xl mx-auto flex flex-col items-center flex-1 justify-center py-10">
-                <h1 className="font-serif text-5xl tracking-[0.1em] text-[#f5eadc] sm:text-6xl drop-shadow-md">GIFT SETS</h1>
-                <p className="font-script mt-4 text-3xl text-[#d7b48a] sm:text-4xl drop-shadow-md">Curated floral gifts for meaningful occasions.</p>
-                
-                <p className="mt-10 text-sm leading-7 text-white/90 max-w-lg sm:text-base drop-shadow-md">
-                  We&apos;re thoughtfully designing exclusive gift sets that combine the beauty of fresh blooms with elegant touches. Each piece will be crafted to make every moment unforgettable.
-                </p>
+            <div className="bg-[#f5eadc] min-h-screen">
+              {/* Header */}
+              <section className="relative overflow-hidden bg-[#1c140d] px-6 py-20 lg:px-10 flex flex-col items-center text-center">
+                <div className="absolute inset-0">
+                  <Image
+                    src="/images/gift_sets_background.webp"
+                    alt="Gift Sets Background"
+                    fill
+                    priority
+                    className="object-cover object-center opacity-40"
+                  />
+                  <div className="absolute inset-0 bg-black/40"></div>
+                </div>
+                <div className="relative z-10 max-w-3xl mx-auto pt-10">
+                  <h1 className="font-serif text-5xl tracking-[0.1em] text-[#f5eadc] sm:text-6xl drop-shadow-md">GIFT SETS</h1>
+                  <p className="font-script mt-6 text-3xl text-[#d7b48a] sm:text-4xl drop-shadow-md">Curated pairings for unforgettable moments.</p>
+                  <p className="mt-8 text-sm leading-7 text-white/90 max-w-xl mx-auto sm:text-base drop-shadow-md">
+                    Elevate your floral gift with our exclusive pairings. From vintage champagne to luxury spa retreats, each set is designed to create a complete sensory experience.
+                  </p>
+                </div>
+              </section>
 
-                <div className="mt-16 w-full">
-                  <h2 className="font-serif text-3xl tracking-[0.15em] text-[#f5eadc] sm:text-4xl drop-shadow-md">LAUNCHING SOON</h2>
-                  <p className="mt-3 text-[10px] font-bold tracking-[0.3em] text-[#d7b48a] uppercase drop-shadow-md">Be the first to experience our exclusive collection.</p>
-                  
-                  <div className="mt-8 flex flex-col sm:flex-row border border-white/20 mx-auto max-w-md bg-black/40 backdrop-blur-md">
-                    <input 
-                      type="email" 
-                      placeholder="Enter your email" 
-                      className="bg-transparent text-white px-5 py-4 flex-1 text-sm outline-none placeholder:text-white/60" 
+              {/* Product Catalog */}
+              <section className="mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-24 space-y-24">
+                
+                {/* Product 1: Noir Celebration */}
+                <div className="grid lg:grid-cols-2 gap-12 items-center">
+                  <div className="relative aspect-square w-full overflow-hidden rounded-sm shadow-2xl">
+                    <Image 
+                      src="/images/gift_set_champagne.webp"
+                      alt="The Noir Celebration Set"
+                      fill
+                      className="object-cover object-center hover:scale-105 transition duration-700"
                     />
-                    <button className="bg-[#e3c59d] text-black text-xs font-bold px-8 py-4 tracking-[0.2em] hover:bg-[#d4b58e] transition">
-                      NOTIFY ME
+                  </div>
+                  <div className="flex flex-col items-start text-left">
+                    <h2 className="font-serif text-4xl text-[#2c1a12]">The Noir Celebration Set</h2>
+                    <p className="mt-4 text-[#8c6a45] italic font-serif text-lg">Deep Red Roses • Moët & Chandon • Artisanal Chocolates</p>
+                    <p className="mt-6 text-sm leading-7 text-black/70">
+                      Our signature black velvet box overflowing with the deepest red premium roses. Paired seamlessly with a chilled bottle of Moët & Chandon champagne and a box of Noir Chocolatier&apos;s finest gold-leaf truffles. The ultimate gesture of romance and celebration.
+                    </p>
+                    <div className="mt-10">
+                      <p className="text-2xl font-serif text-[#2c1a12]">$350.00</p>
+                    </div>
+                    <button className="mt-8 bg-black text-[#e3c59d] px-12 py-4 text-xs font-bold tracking-[0.2em] hover:bg-[#1a1a1a] transition w-full sm:w-auto">
+                      ADD TO CART
                     </button>
                   </div>
-                  <p className="mt-4 text-[11px] italic text-white/60 drop-shadow-md">We&apos;ll only send you updates about our launch.</p>
                 </div>
 
-                <button 
-                  onClick={() => setPage('home')}
-                  className="mt-16 border border-white/20 px-8 py-3 text-[11px] font-bold tracking-[0.2em] text-white/80 hover:bg-white/10 hover:text-white transition backdrop-blur-sm"
-                >
-                  BACK TO HOME
-                </button>
-              </div>
-            </section>
+                {/* Divider */}
+                <div className="flex justify-center text-[#d7b48a] text-2xl">❦</div>
+
+                {/* Product 2: Botanical Spa */}
+                <div className="grid lg:grid-cols-2 gap-12 items-center">
+                  <div className="order-2 lg:order-1 flex flex-col items-start text-left lg:pl-10">
+                    <h2 className="font-serif text-4xl text-[#2c1a12]">The Botanical Spa Retreat</h2>
+                    <p className="mt-4 text-[#8c6a45] italic font-serif text-lg">Pastel Roses • Botanical Soak • Scented Candle • Silk Mask</p>
+                    <p className="mt-6 text-sm leading-7 text-black/70">
+                      A serene escape captured in a box. A pristine white acrylic vessel showcasing delicate blush and white roses, paired with luxury Aura Botanica rose and sandalwood bath salts, a poured amber candle, and a pure silk sleep mask. Perfect for birthdays, Mother&apos;s Day, or self-care.
+                    </p>
+                    <div className="mt-10">
+                      <p className="text-2xl font-serif text-[#2c1a12]">$280.00</p>
+                    </div>
+                    <button className="mt-8 bg-black text-[#e3c59d] px-12 py-4 text-xs font-bold tracking-[0.2em] hover:bg-[#1a1a1a] transition w-full sm:w-auto">
+                      ADD TO CART
+                    </button>
+                  </div>
+                  <div className="order-1 lg:order-2 relative aspect-square w-full overflow-hidden rounded-sm shadow-2xl">
+                    <Image 
+                      src="/images/gift_set_spa.webp"
+                      alt="The Botanical Spa Retreat"
+                      fill
+                      className="object-cover object-center hover:scale-105 transition duration-700"
+                    />
+                  </div>
+                </div>
+
+              </section>
+            </div>
           )}
 
           {page === 'custom' && (
-            <section className="relative min-h-[90vh] bg-black px-6 py-16 text-center text-white flex flex-col items-center justify-center">
-              <div className="absolute inset-0">
-                <Image
-                  src="/images/custom_order_background.webp"
-                  alt="Custom Order Background"
-                  fill
-                  priority
-                  className="object-cover object-center"
-                />
-              </div>
-              <div className="absolute inset-0 bg-black/60" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/40" />
-              
-              <div className="relative z-10 max-w-2xl mx-auto flex flex-col items-center flex-1 justify-center py-10">
-                <h1 className="font-serif text-5xl tracking-[0.1em] text-[#f5eadc] sm:text-6xl drop-shadow-md">CUSTOM ORDER</h1>
-                <p className="font-script mt-4 text-3xl text-[#d7b48a] sm:text-4xl drop-shadow-md">Create something uniquely yours.</p>
+            <div className="bg-[#0a0502] min-h-screen text-white">
+              {/* Header */}
+              <section className="relative overflow-hidden px-6 py-20 lg:px-10 flex flex-col items-center text-center">
+                <div className="relative z-10 max-w-3xl mx-auto pt-10">
+                  <h1 className="font-serif text-5xl tracking-[0.1em] text-[#f5eadc] sm:text-6xl drop-shadow-md">CUSTOM ORDER</h1>
+                  <p className="font-script mt-6 text-3xl text-[#d7b48a] sm:text-4xl drop-shadow-md">Create something uniquely yours.</p>
+                  <p className="mt-8 text-sm leading-7 text-white/60 max-w-xl mx-auto sm:text-base drop-shadow-md">
+                    Design a bespoke floral arrangement tailored to your exact vision. Follow the steps below to curate your perfect luxury box.
+                  </p>
+                </div>
+              </section>
+
+              {/* Steps Layout */}
+              <section className="mx-auto max-w-7xl px-6 py-10 lg:px-10 pb-24 space-y-20">
                 
-                <div className="mt-8 text-[#d7b48a] drop-shadow-md">❦</div>
-
-                <p className="mt-8 text-sm leading-7 text-white/90 max-w-lg sm:text-base drop-shadow-md">
-                  We&apos;re preparing a personalized floral experience where you can design a bouquet tailored to your vision, style, and occasion. Every detail will be crafted with care.
-                </p>
-
-                <div className="mt-16 w-full">
-                  <h2 className="font-serif text-3xl tracking-[0.15em] text-[#f5eadc] sm:text-4xl drop-shadow-md">AVAILABLE SOON</h2>
-                  <p className="mt-3 text-[10px] font-bold tracking-[0.3em] text-[#d7b48a] uppercase drop-shadow-md">Custom creations, made just for you.</p>
-                  
-                  <div className="mt-8 flex flex-col sm:flex-row border border-white/20 mx-auto max-w-md bg-black/40 backdrop-blur-md">
-                    <input 
-                      type="email" 
-                      placeholder="Enter your email" 
-                      className="bg-transparent text-white px-5 py-4 flex-1 text-sm outline-none placeholder:text-white/60" 
+                {/* Step 1 */}
+                <div className="grid lg:grid-cols-2 gap-12 items-center bg-[#130a05] border border-white/5 p-8 lg:p-12">
+                  <div className="relative aspect-square w-full overflow-hidden shadow-2xl">
+                    <Image 
+                      src="/images/custom_empty_box.webp"
+                      alt="Choose Your Vessel"
+                      fill
+                      className="object-cover object-center"
                     />
-                    <button className="bg-[#e3c59d] text-black text-xs font-bold px-8 py-4 tracking-[0.2em] hover:bg-[#d4b58e] transition">
-                      NOTIFY ME
-                    </button>
                   </div>
-                  <p className="mt-4 text-[11px] italic text-white/60 drop-shadow-md">We&apos;ll only send you updates about our launch.</p>
+                  <div className="flex flex-col items-start text-left lg:pl-8">
+                    <h3 className="text-[10px] font-bold tracking-[0.3em] uppercase text-[#d7b48a] mb-4">Step 01</h3>
+                    <h2 className="font-serif text-4xl text-[#f5eadc]">Choose Your Vessel</h2>
+                    <p className="mt-4 text-sm leading-7 text-white/60">
+                      Select the foundation of your arrangement. Our signature velvet boxes offer a classic, moody romance, while our clear acrylic designs provide a modern, unobstructed view of the blooms.
+                    </p>
+                    
+                    <div className="mt-8 w-full space-y-3">
+                      <button className="w-full flex justify-between items-center border border-[#d7b48a] bg-[#d7b48a]/10 px-6 py-4 transition">
+                        <span className="font-serif text-lg tracking-wide text-[#f5eadc]">Classic Round Velvet</span>
+                        <span className="text-xs text-[#d7b48a] tracking-widest uppercase">Selected</span>
+                      </button>
+                      <button className="w-full flex justify-between items-center border border-white/10 hover:border-white/30 px-6 py-4 transition text-white/60 hover:text-white">
+                        <span className="font-serif text-lg tracking-wide">Square Acrylic Case</span>
+                      </button>
+                      <button className="w-full flex justify-between items-center border border-white/10 hover:border-white/30 px-6 py-4 transition text-white/60 hover:text-white">
+                        <span className="font-serif text-lg tracking-wide">Signature Heart Velvet</span>
+                      </button>
+                    </div>
+                  </div>
                 </div>
 
-                <button 
-                  onClick={() => setPage('home')}
-                  className="mt-16 border border-white/20 px-8 py-3 text-[11px] font-bold tracking-[0.2em] text-white/80 hover:bg-white/10 hover:text-white transition backdrop-blur-sm"
-                >
-                  BACK TO HOME
-                </button>
-              </div>
-            </section>
+                {/* Step 2 */}
+                <div className="grid lg:grid-cols-2 gap-12 items-center bg-[#130a05] border border-white/5 p-8 lg:p-12">
+                  <div className="order-2 lg:order-1 flex flex-col items-start text-left">
+                    <h3 className="text-[10px] font-bold tracking-[0.3em] uppercase text-[#d7b48a] mb-4">Step 02</h3>
+                    <h2 className="font-serif text-4xl text-[#f5eadc]">Curate Your Palette</h2>
+                    <p className="mt-4 text-sm leading-7 text-white/60">
+                      Select the perfect hue to convey your message. We source only the finest, longest-lasting premium roses from the volcanic soils of Ecuador.
+                    </p>
+                    
+                    <div className="mt-8 w-full grid grid-cols-2 gap-3">
+                      <button className="flex flex-col items-center justify-center border border-white/10 hover:border-[#d7b48a]/50 bg-black/40 px-4 py-6 transition text-white/60 hover:text-[#f5eadc]">
+                        <div className="w-8 h-8 rounded-full bg-[#6a0d20] mb-3 shadow-inner"></div>
+                        <span className="text-[11px] font-bold tracking-widest uppercase">Deep Red</span>
+                      </button>
+                      <button className="flex flex-col items-center justify-center border border-white/10 hover:border-[#d7b48a]/50 bg-black/40 px-4 py-6 transition text-white/60 hover:text-[#f5eadc]">
+                        <div className="w-8 h-8 rounded-full bg-[#fdfbf7] mb-3 shadow-inner"></div>
+                        <span className="text-[11px] font-bold tracking-widest uppercase">Pure White</span>
+                      </button>
+                      <button className="flex flex-col items-center justify-center border border-[#d7b48a] bg-[#d7b48a]/5 px-4 py-6 transition text-[#f5eadc]">
+                        <div className="w-8 h-8 rounded-full bg-[#fcd4c7] mb-3 shadow-inner ring-2 ring-[#d7b48a] ring-offset-2 ring-offset-[#130a05]"></div>
+                        <span className="text-[11px] font-bold tracking-widest uppercase">Blush Pink</span>
+                      </button>
+                      <button className="flex flex-col items-center justify-center border border-white/10 hover:border-[#d7b48a]/50 bg-black/40 px-4 py-6 transition text-white/60 hover:text-[#f5eadc]">
+                        <div className="w-8 h-8 rounded-full bg-[#e8b5a2] mb-3 shadow-inner"></div>
+                        <span className="text-[11px] font-bold tracking-widest uppercase">Soft Peach</span>
+                      </button>
+                    </div>
+
+                    <button className="mt-12 bg-[#e3c59d] text-black w-full px-12 py-4 text-xs font-bold tracking-[0.2em] hover:bg-[#d4b58e] transition shadow-[0_0_20px_rgba(227,197,157,0.3)]">
+                      REVIEW & CHECKOUT — $250.00
+                    </button>
+                  </div>
+                  <div className="order-1 lg:order-2 relative aspect-square w-full overflow-hidden shadow-2xl">
+                    <Image 
+                      src="/images/custom_rose_palette.webp"
+                      alt="Curate Your Palette"
+                      fill
+                      className="object-cover object-center"
+                    />
+                  </div>
+                </div>
+
+              </section>
+            </div>
           )}
 
         </motion.div>
