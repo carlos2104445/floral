@@ -537,80 +537,77 @@ export default function LovenWebsite() {
           )}
 
           {page === 'gift' && (
-            <div className="bg-[#f5eadc] min-h-screen">
+            <div className="bg-[#0a0502] min-h-screen text-white">
               {/* Header */}
-              <section className="relative overflow-hidden bg-[#1c140d] px-6 py-20 lg:px-10 flex flex-col items-center text-center">
+              <section className="relative overflow-hidden px-6 py-20 lg:px-10 flex flex-col items-center text-center border-b border-white/5">
                 <div className="absolute inset-0">
                   <Image
                     src="/images/gift_sets_background.webp"
                     alt="Gift Sets Background"
                     fill
                     priority
-                    className="object-cover object-center opacity-40"
+                    className="object-cover object-center opacity-30"
                   />
-                  <div className="absolute inset-0 bg-black/40"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0502] via-[#0a0502]/50 to-transparent"></div>
                 </div>
                 <div className="relative z-10 max-w-3xl mx-auto pt-10">
                   <h1 className="font-serif text-5xl tracking-[0.1em] text-[#f5eadc] sm:text-6xl drop-shadow-md">GIFT SETS</h1>
                   <p className="font-script mt-6 text-3xl text-[#d7b48a] sm:text-4xl drop-shadow-md">Curated pairings for unforgettable moments.</p>
-                  <p className="mt-8 text-sm leading-7 text-white/90 max-w-xl mx-auto sm:text-base drop-shadow-md">
+                  <p className="mt-8 text-sm leading-7 text-white/60 max-w-xl mx-auto sm:text-base drop-shadow-md">
                     Elevate your floral gift with our exclusive pairings. From vintage champagne to luxury spa retreats, each set is designed to create a complete sensory experience.
                   </p>
                 </div>
               </section>
 
               {/* Product Catalog */}
-              <section className="mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-24 space-y-24">
+              <section className="mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-24 space-y-20 lg:space-y-32">
                 
                 {/* Product 1: Noir Celebration */}
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
-                  <div className="relative aspect-square w-full overflow-hidden rounded-sm shadow-2xl">
+                <div className="grid lg:grid-cols-2 gap-12 items-center bg-[#130a05] border border-white/5 p-6 sm:p-10 lg:p-12">
+                  <div className="relative aspect-square w-full overflow-hidden shadow-2xl border border-white/10">
                     <Image 
                       src="/images/gift_set_champagne.webp"
                       alt="The Noir Celebration Set"
                       fill
-                      className="object-cover object-center hover:scale-105 transition duration-700"
+                      className="object-cover object-center hover:scale-105 transition duration-1000"
                     />
                   </div>
-                  <div className="flex flex-col items-start text-left">
-                    <h2 className="font-serif text-4xl text-[#2c1a12]">The Noir Celebration Set</h2>
-                    <p className="mt-4 text-[#8c6a45] italic font-serif text-lg">Deep Red Roses • Moët & Chandon • Artisanal Chocolates</p>
-                    <p className="mt-6 text-sm leading-7 text-black/70">
+                  <div className="flex flex-col items-start text-left lg:pl-10">
+                    <h2 className="font-serif text-4xl text-[#f5eadc]">The Noir Celebration Set</h2>
+                    <p className="mt-4 text-[#d7b48a] italic font-serif text-lg tracking-wide">Deep Red Roses • Moët & Chandon • Chocolates</p>
+                    <p className="mt-6 text-sm leading-7 text-white/60">
                       Our signature black velvet box overflowing with the deepest red premium roses. Paired seamlessly with a chilled bottle of Moët & Chandon champagne and a box of Noir Chocolatier&apos;s finest gold-leaf truffles. The ultimate gesture of romance and celebration.
                     </p>
-                    <div className="mt-10">
-                      <p className="text-2xl font-serif text-[#2c1a12]">$350.00</p>
+                    <div className="mt-10 flex items-center justify-between w-full border-t border-white/10 pt-8">
+                      <p className="text-2xl font-serif text-[#f5eadc]">$350.00</p>
+                      <button className="bg-[#e3c59d] text-black px-10 py-4 text-[10px] font-bold tracking-[0.2em] hover:bg-[#d4b58e] transition shadow-[0_0_20px_rgba(227,197,157,0.2)]">
+                        ADD TO CART
+                      </button>
                     </div>
-                    <button className="mt-8 bg-black text-[#e3c59d] px-12 py-4 text-xs font-bold tracking-[0.2em] hover:bg-[#1a1a1a] transition w-full sm:w-auto">
-                      ADD TO CART
-                    </button>
                   </div>
                 </div>
 
-                {/* Divider */}
-                <div className="flex justify-center text-[#d7b48a] text-2xl">❦</div>
-
                 {/* Product 2: Botanical Spa */}
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
-                  <div className="order-2 lg:order-1 flex flex-col items-start text-left lg:pl-10">
-                    <h2 className="font-serif text-4xl text-[#2c1a12]">The Botanical Spa Retreat</h2>
-                    <p className="mt-4 text-[#8c6a45] italic font-serif text-lg">Pastel Roses • Botanical Soak • Scented Candle • Silk Mask</p>
-                    <p className="mt-6 text-sm leading-7 text-black/70">
+                <div className="grid lg:grid-cols-2 gap-12 items-center bg-[#130a05] border border-white/5 p-6 sm:p-10 lg:p-12">
+                  <div className="order-2 lg:order-1 flex flex-col items-start text-left lg:pr-10">
+                    <h2 className="font-serif text-4xl text-[#f5eadc]">The Botanical Spa Retreat</h2>
+                    <p className="mt-4 text-[#d7b48a] italic font-serif text-lg tracking-wide">Pastel Roses • Botanical Soak • Candle • Silk Mask</p>
+                    <p className="mt-6 text-sm leading-7 text-white/60">
                       A serene escape captured in a box. A pristine white acrylic vessel showcasing delicate blush and white roses, paired with luxury Aura Botanica rose and sandalwood bath salts, a poured amber candle, and a pure silk sleep mask. Perfect for birthdays, Mother&apos;s Day, or self-care.
                     </p>
-                    <div className="mt-10">
-                      <p className="text-2xl font-serif text-[#2c1a12]">$280.00</p>
+                    <div className="mt-10 flex items-center justify-between w-full border-t border-white/10 pt-8">
+                      <p className="text-2xl font-serif text-[#f5eadc]">$280.00</p>
+                      <button className="bg-[#e3c59d] text-black px-10 py-4 text-[10px] font-bold tracking-[0.2em] hover:bg-[#d4b58e] transition shadow-[0_0_20px_rgba(227,197,157,0.2)]">
+                        ADD TO CART
+                      </button>
                     </div>
-                    <button className="mt-8 bg-black text-[#e3c59d] px-12 py-4 text-xs font-bold tracking-[0.2em] hover:bg-[#1a1a1a] transition w-full sm:w-auto">
-                      ADD TO CART
-                    </button>
                   </div>
-                  <div className="order-1 lg:order-2 relative aspect-square w-full overflow-hidden rounded-sm shadow-2xl">
+                  <div className="order-1 lg:order-2 relative aspect-square w-full overflow-hidden shadow-2xl border border-white/10">
                     <Image 
                       src="/images/gift_set_spa.webp"
                       alt="The Botanical Spa Retreat"
                       fill
-                      className="object-cover object-center hover:scale-105 transition duration-700"
+                      className="object-cover object-center hover:scale-105 transition duration-1000"
                     />
                   </div>
                 </div>
