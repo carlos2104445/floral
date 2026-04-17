@@ -57,7 +57,4 @@ jobs:
             else
               PORT=3000 pm2 start server.js --name floral
               pm2 save
-              pm2 startup | tail -n 1 > /tmp/pm2_startup.sh
-              chmod +x /tmp/pm2_startup.sh
-              /tmp/pm2_startup.sh
             fi
