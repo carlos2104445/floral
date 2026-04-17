@@ -20,30 +20,30 @@ export default function LovenWebsite() {
       title: 'Signature Bouquets',
       subtitle: 'Elegant, handcrafted arrangements for everyday luxury.',
       cta: 'SHOP NOW',
-      image: '/images/classic_red_roses_1776427660541.png',
+      image: '/images/classic_red_roses_1776427660541.webp',
       targetPage: 'signature'
     },
     {
       title: 'Gift Sets',
       subtitle: 'Curated floral gifts for meaningful occasions.',
       cta: 'EXPLORE',
-      image: '/images/gift_sets_black_box_1776427689237.png',
+      image: '/images/gift_sets_black_box_1776427689237.webp',
       targetPage: 'gift'
     },
     {
       title: 'Custom Order',
       subtitle: 'Create your own personalized bouquet.',
       cta: 'START ORDER',
-      image: '/images/white_roses_custom_1776427706759.png',
+      image: '/images/white_roses_custom_1776427706759.webp',
       targetPage: 'custom'
     },
   ];
 
   const gallery = [
-    '/images/mixed_pastel_roses_1776427722728.png',
-    '/images/home_hero_white_roses_tag.jpg',
-    '/images/classic_red_roses_1776427660541.png',
-    '/images/white_roses_custom_1776427706759.png',
+    '/images/mixed_pastel_roses_1776427722728.webp',
+    '/images/home_hero_white_roses_tag.webp',
+    '/images/classic_red_roses_1776427660541.webp',
+    '/images/white_roses_custom_1776427706759.webp',
   ];
 
   const handleNav = (item: string) => {
@@ -166,7 +166,7 @@ export default function LovenWebsite() {
                   </div>
                   <div className="relative min-h-[50vh] w-full hidden lg:block">
                     <Image
-                      src="/images/home_hero_white_roses_tag.jpg"
+                      src="/images/home_hero_white_roses_tag.webp"
                       alt="Luxury white rose bouquet in black wrapping"
                       fill
                       priority
@@ -230,7 +230,7 @@ export default function LovenWebsite() {
                 {/* Generated floral shadow background pattern */}
                 <div className="absolute inset-0">
                   <Image
-                    src="/images/floral_shadow_bg.png"
+                    src="/images/floral_shadow_bg.webp"
                     alt="Floral shadow pattern"
                     fill
                     className="object-cover object-center opacity-80"
@@ -267,7 +267,7 @@ export default function LovenWebsite() {
                   <div className="grid min-h-[470px] items-stretch lg:grid-cols-[40%_60%] xl:grid-cols-[30%_70%]">
                     <div className="relative min-h-[470px] overflow-hidden bg-black border-r border-white/10">
                       <Image
-                        src="/images/classic_red_roses_1776427660541.png"
+                        src="/images/classic_red_roses_1776427660541.webp"
                         alt="Classic rose bouquet"
                         fill
                         className="absolute inset-0 h-full w-full object-cover object-center"
@@ -387,7 +387,7 @@ export default function LovenWebsite() {
 
                     <div className="relative min-h-[470px] overflow-hidden bg-[#eadbcc] border-l border-black/10">
                       <Image
-                        src="/images/mixed_pastel_roses_1776427722728.png"
+                        src="/images/mixed_pastel_roses_1776427722728.webp"
                         alt="Assorted rose bouquet"
                         fill
                         className="absolute inset-0 h-full w-full object-cover object-center"
@@ -402,7 +402,7 @@ export default function LovenWebsite() {
                   <div className="grid min-h-[470px] items-stretch lg:grid-cols-[40%_60%] xl:grid-cols-[30%_70%]">
                     <div className="relative min-h-[470px] overflow-hidden bg-black border-r border-white/10">
                       <Image
-                        src="/images/teddy_bear_bouquet_1776427738683.png"
+                        src="/images/teddy_bear_bouquet_1776427738683.webp"
                         alt="Kids floral bouquet"
                         fill
                         className="absolute inset-0 h-full w-full object-cover object-center"
@@ -479,27 +479,27 @@ export default function LovenWebsite() {
                       {
                         title: 'Custom Name Sign',
                         price: '+$15 - $25',
-                        image: '/images/classic_red_roses_1776427660541.png',
+                        image: '/images/classic_red_roses_1776427660541.webp',
                       },
                       {
                         title: 'Ribbon Personalization',
                         price: '+$10.00',
-                        image: '/images/gift_sets_black_box_1776427689237.png',
+                        image: '/images/gift_sets_black_box_1776427689237.webp',
                       },
                       {
                         title: 'Glitter Decoration',
                         price: '+$10.00',
-                        image: '/images/home_hero_white_roses_tag.jpg',
+                        image: '/images/home_hero_white_roses_tag.webp',
                       },
                       {
                         title: 'Greeting Card',
                         price: '+$5.00',
-                        image: '/images/mixed_pastel_roses_1776427722728.png',
+                        image: '/images/mixed_pastel_roses_1776427722728.webp',
                       },
                       {
                         title: 'Round Bouquet Base',
                         price: '+$30.00',
-                        image: '/images/teddy_bear_bouquet_1776427738683.png',
+                        image: '/images/teddy_bear_bouquet_1776427738683.webp',
                       },
                     ].map((item) => (
                       <label key={item.title} className="block cursor-pointer group">
@@ -540,7 +540,7 @@ export default function LovenWebsite() {
             <section className="relative min-h-[90vh] bg-black px-6 py-16 text-center text-white flex flex-col items-center justify-center">
               <div className="absolute inset-0">
                 <Image
-                  src="/images/gift_sets_background.jpg"
+                  src="/images/gift_sets_background.webp"
                   alt="Gift Sets Background"
                   fill
                   priority
@@ -589,7 +589,7 @@ export default function LovenWebsite() {
             <section className="relative min-h-[90vh] bg-black px-6 py-16 text-center text-white flex flex-col items-center justify-center">
               <div className="absolute inset-0">
                 <Image
-                  src="/images/custom_order_background.jpg"
+                  src="/images/custom_order_background.webp"
                   alt="Custom Order Background"
                   fill
                   priority
