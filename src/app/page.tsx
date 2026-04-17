@@ -743,7 +743,7 @@ export default function LovenWebsite() {
             {/* Column 2: Collections */}
             <div>
               <h3 className="text-[10px] font-bold tracking-[0.3em] uppercase text-white/40 mb-6">Collections</h3>
-              <ul className="space-y-4 text-[11px] font-semibold tracking-[0.15em] text-white/80 uppercase">
+              <ul className="space-y-4 text-[10px] font-bold tracking-[0.2em] text-white/80 uppercase">
                 <li><button onClick={() => setPage('signature')} className="hover:text-[#e3c59d] transition">Signature Bouquets</button></li>
                 <li><button onClick={() => setPage('gift')} className="hover:text-[#e3c59d] transition">Gift Sets</button></li>
                 <li><button onClick={() => setPage('custom')} className="hover:text-[#e3c59d] transition">Custom Orders</button></li>
@@ -754,11 +754,11 @@ export default function LovenWebsite() {
             {/* Column 3: Client Care */}
             <div>
               <h3 className="text-[10px] font-bold tracking-[0.3em] uppercase text-white/40 mb-6">Client Care</h3>
-              <ul className="space-y-4 text-[11px] font-semibold tracking-[0.15em] text-white/80 uppercase">
-                <li><a href="#" className="hover:text-[#e3c59d] transition">Contact Us</a></li>
-                <li><a href="#" className="hover:text-[#e3c59d] transition">Delivery Information</a></li>
-                <li><a href="#" className="hover:text-[#e3c59d] transition">Return Policy</a></li>
-                <li><a href="#" className="hover:text-[#e3c59d] transition">Flower Care Guide</a></li>
+              <ul className="space-y-4 text-[10px] font-bold tracking-[0.2em] text-white/80 uppercase">
+                <li><button className="hover:text-[#e3c59d] transition">Contact Us</button></li>
+                <li><button className="hover:text-[#e3c59d] transition">Delivery Information</button></li>
+                <li><button className="hover:text-[#e3c59d] transition">Return Policy</button></li>
+                <li><button className="hover:text-[#e3c59d] transition">Flower Care Guide</button></li>
               </ul>
             </div>
 
@@ -783,11 +783,11 @@ export default function LovenWebsite() {
           </div>
 
           {/* Bottom Bar */}
-          <div className="mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] tracking-[0.1em] text-white/40 uppercase">
+          <div className="mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] font-bold tracking-[0.2em] text-white/40 uppercase">
             <p>© 2026 LOVÉN. All rights reserved.</p>
             <div className="flex gap-6">
-              <a href="#" className="hover:text-white/80 transition">Privacy Policy</a>
-              <a href="#" className="hover:text-white/80 transition">Terms of Service</a>
+              <button className="hover:text-white/80 transition">Privacy Policy</button>
+              <button className="hover:text-white/80 transition">Terms of Service</button>
             </div>
           </div>
         </div>
